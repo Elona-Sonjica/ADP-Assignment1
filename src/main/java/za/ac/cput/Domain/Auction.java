@@ -11,7 +11,7 @@ public class Auction {
 
         private final Long auctionID;
         private final Long productID;
-        private final Long sellerID;
+        private final String userID;
         private final BigDecimal startingPrice;
         private BigDecimal currentHighestBid;
         private Long currentHighestBidderId;
@@ -21,7 +21,7 @@ public class Auction {
         public Auction(Builder builder){
             this.auctionID = builder.auctionID;
             this.productID = builder.productID;
-            this.sellerID = builder.sellerID;
+            this.userID = builder.userID;
             this.startingPrice = builder.startingPrice;
             this.currentHighestBid = builder.currentHighestBid;
             this.currentHighestBidderId =builder.currentHighestBidderID;
@@ -34,7 +34,7 @@ public class Auction {
         return "Auction{" +
                 "auctionId=" + auctionID +
                 ", productId=" + productID +
-                ", sellerId=" + sellerID +
+                ", userId=" + userID +
                 ", startingPrice=" + startingPrice +
                 ", endTime=" + endTime +
                 '}';
@@ -44,7 +44,7 @@ public class Auction {
         public static class Builder{
             private Long auctionID;
             private Long productID;
-            private Long sellerID;
+            private String userID;
             private BigDecimal startingPrice;
             private BigDecimal currentHighestBid;
             private Long currentHighestBidderID;
@@ -61,8 +61,8 @@ public class Auction {
                 return this;
             }
 
-            public Builder sellerId(Long sellerID){
-                this.sellerID =sellerID;
+            public Builder userId(String userID){
+                this.userID =userID;
                 return this;
             }
 
@@ -99,7 +99,7 @@ public class Auction {
         //getters
         public Long getAuctionID() {return auctionID;}
         public Long getProductID() {return productID;}
-        public Long getSellerID() {return sellerID;}
+        public String getUserID() {return userID;}
         public BigDecimal getStartingPrice() {return startingPrice;}
         public BigDecimal getCurrentHighestBid() {return currentHighestBid;}
         public Long getCurrentHighestBidderID() {return currentHighestBidderId;}

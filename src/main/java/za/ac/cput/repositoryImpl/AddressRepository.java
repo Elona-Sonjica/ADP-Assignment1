@@ -17,6 +17,7 @@ public class AddressRepository implements IAddressRepository {
     private AddressRepository() { allAddresses = new ArrayList<>();
     }
 
+
     public static AddressRepository getRepository() {
         if (repository == null) {
             repository = new AddressRepository();
@@ -59,6 +60,11 @@ public class AddressRepository implements IAddressRepository {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean exists(String addressId) {
+        return read(addressId) != null;
     }
 
     @Override

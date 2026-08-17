@@ -18,21 +18,18 @@ class UserRepositoryTest {
             .setUserId("U1")
             .setName("John")
             .setSurname("Doe")
-            .setEmail("john.doe@example.com")
             .build();
 
     private User user2 = new User.Builder()
             .setUserId("U2")
             .setName("Jane")
             .setSurname("Smith")
-            .setEmail("jane.smith@example.com")
             .build();
 
     private User user3 = new User.Builder()
             .setUserId("U3")
             .setName("Alice")
             .setSurname("Brown")
-            .setEmail("alice.brown@example.com")
             .build();
 
     @BeforeEach
@@ -74,7 +71,6 @@ class UserRepositoryTest {
                 .setUserId("U1")
                 .setName("Johnny")
                 .setSurname("Doe")
-                .setEmail("john.doe@example.com")
                 .build();
 
         User updated = repository.update(updatedUser);

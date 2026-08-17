@@ -28,8 +28,6 @@ public class UserFactory {
                 .setUserId(userId)
                 .setSurname(surname)
                 .setName(name)
-                .setEmail(email)
-                .setPassword(password)
                 .build();
     }
 }

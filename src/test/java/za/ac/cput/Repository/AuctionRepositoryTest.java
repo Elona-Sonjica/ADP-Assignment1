@@ -21,7 +21,7 @@ class AuctionRepositoryTest {
     private Auction auction1 = new Auction.Builder()
             .auctionID(1L)
             .productID(100L)
-            .sellerId(2L)
+            .userId("2L")
             .startingPrice(new BigDecimal("100"))
             .endTime(LocalDateTime.now().plusDays(1))
             .build();
@@ -29,7 +29,7 @@ class AuctionRepositoryTest {
     private Auction auction2 = new Auction.Builder()
             .auctionID(2L)
             .productID(102L)
-            .sellerId(2L)
+            .userId("2L")
             .startingPrice(new BigDecimal("100"))
             .endTime(LocalDateTime.now().plusDays(1))
             .build();
@@ -37,7 +37,7 @@ class AuctionRepositoryTest {
     private Auction auction3 = new Auction.Builder()
             .auctionID(3L)
             .productID(101L)
-            .sellerId(2L)
+            .userId("2L")
             .startingPrice(new BigDecimal("100"))
             .endTime(LocalDateTime.now().plusDays(1))
             .build();
@@ -80,7 +80,7 @@ class AuctionRepositoryTest {
         Auction updatedAuction = new Auction.Builder()
                 .auctionID(1L)
                 .productID(10L)
-                .sellerId(2L)
+                .userId("2L")
                 .startingPrice(new BigDecimal("200"))
                 .endTime(LocalDateTime.now().plusDays(1))
                 .build();

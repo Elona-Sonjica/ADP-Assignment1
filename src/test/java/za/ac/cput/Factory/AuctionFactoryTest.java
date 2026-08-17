@@ -15,7 +15,7 @@ class AuctionFactoryTest {
         Auction auction = AuctionFactory.createAuction(
                 1L,
                 10L,
-                1111L,
+                "1111L",
                 new BigDecimal("100"),
                 LocalDateTime.now().plusDays(7)
         );

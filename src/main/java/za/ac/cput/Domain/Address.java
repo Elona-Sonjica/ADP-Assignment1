@@ -32,7 +32,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Builder{" +
+        return "Address{" +
                 "addressId='" + addressId + '\'' +
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +

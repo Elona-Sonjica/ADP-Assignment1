@@ -11,18 +11,18 @@ public class AuctionFactory {
     public static Auction createAuction(
             Long auctionID,
             Long productID,
-            Long sellerID,
+            String userID,
             BigDecimal startingPrice,
             LocalDateTime endTime ) {
 
-        if (auctionID == null || productID == null || sellerID == null || startingPrice == null || endTime == null) {
+        if (auctionID == null || productID == null || userID == null || startingPrice == null || endTime == null) {
             throw new IllegalArgumentException("Invalid auction data");
         }
 
         return new Auction.Builder()
                 .auctionID(auctionID)
                 .productID(productID)
-                .sellerId(sellerID)
+                .userId(userID)
                 .startingPrice(startingPrice)
                 .endTime(endTime)
                 .build();
