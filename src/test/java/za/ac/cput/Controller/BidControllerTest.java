@@ -125,7 +125,7 @@ class BidControllerTest {
     }
 
 
-   /* @Test
+    @Test
     void e_delete() {
 
         restTemplate.delete(baseURL + "/delete/bid1");
@@ -135,10 +135,10 @@ class BidControllerTest {
                         baseURL + "/read/bid1",
                         Bid.class
                 );
+        assertNull(response.getBody());
         System.out.println("Deleted: " + response.getBody());
-    }*/
+    }
 
-       // assertNull(response.getBody());
 
 }
 
