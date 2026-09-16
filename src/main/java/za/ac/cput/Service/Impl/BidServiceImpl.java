@@ -6,8 +6,8 @@ import za.ac.cput.Domain.Bid;
 import za.ac.cput.Repository.IBidRepository;
 import za.ac.cput.Service.BidService;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class BidServiceImpl implements BidService {
@@ -46,17 +46,31 @@ public class BidServiceImpl implements BidService {
 
     @Override
     public List<Bid> getAllBidsByAuctionId(String auctionId) {
-        return bidRepository.getAll()
-                .stream()
-                .filter(bid -> bid.getAuctionId().equals(auctionId))
-                .collect(Collectors.toList());
+
+        List<Bid> bids = bidRepository.getAll();
+        List<Bid> result = new ArrayList<>();
+
+        for (Bid bid : bids) {
+            if (bid.getAuctionId().equals(auctionId)) {
+                result.add(bid);
+            }
+        }
+
+        return result;
     }
 
     @Override
     public List<Bid> getAllBidsByUserId(String userId) {
-        return bidRepository.getAll()
-                .stream()
-                .filter(bid -> bid.getUserId().equals(userId))
-                .collect(Collectors.toList());
+
+        List<Bid> bids = bidRepository.getAll();
+        List<Bid> result = new ArrayList<>();
+
+        for (Bid bid : bids) {
+            if (bid.getUserId().equals(userId)) {
+                result.add(bid);
+            }
+        }
+
+        return result;
     }
 }
